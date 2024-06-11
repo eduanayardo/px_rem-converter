@@ -1,28 +1,28 @@
 
 # Unit Converter
 
-Unit Converter es una herramienta para convertir fácilmente unidades de píxeles (PX) a REM y viceversa. Incluye una interfaz gráfica que permite alternar entre modo claro y oscuro, así como soporte para múltiples idiomas (inglés y español).
+PX_REM-Converter es una herramienta para convertir fácilmente unidades de píxeles (PX) a REM y viceversa. Incluye una interfaz gráfica que permite alternar entre modo claro y oscuro, así como soporte para múltiples idiomas (inglés y español).
 
 ## Características
 
 - Convertir PX a REM y REM a PX
 - Interfaz gráfica amigable
-- Modo claro y oscuro
+- Modo ☀️ y 🌑
 
-## Demo
+<!-- ## Demo
 
-Puedes ver una demostración en vivo de la herramienta aquí: [Demo](https://yourwebsite.com)
+Puedes ver una demostración en vivo de la herramienta aquí: [Demo](https://yourwebsite.com) -->
 
 ## Requisitos
 
-- Node.js
-- npm (Node Package Manager)
+- [Node.js](https://nodejs.org/en)
+- [npm (Node Package Manager)](https://www.npmjs.com/)
 
 ## Instalación
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/px_rem-converter.git
+   git clone https://github.com/eduanayardo/px_rem-converter.git
    cd px_rem-converter
    ```
 

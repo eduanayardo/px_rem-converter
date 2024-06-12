@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Convertidor de PX to REM :: Eduanayardo</title>
-	<link rel="stylesheet" href="style-min.css" />
+	<link rel="stylesheet" href="style.css" />
 
 	<!-- Meta tags for SEO in Spanish -->
 	<meta name="description"
@@ -96,7 +96,7 @@
 	</header>
 	<main>
 		<div class="app">
-			<h1>Convertidor de PX to REM</h1>
+			<h1>Convertidor de <label class="labelInput">PX</label> a <label class="labelOutput">REM</label></h1>
 			<div class="input-group">
 				<label id="" for="baseValue">El cálculo esta basado en
 					<input type="text" id="baseValue" value="16" /> de píxel como tamaño
@@ -104,7 +104,7 @@
 			</div>
 			<div class="converter">
 				<div class="input-group">
-					<label id="labelInput" for="inputValue">Pixels</label>
+					<label class="labelInput" for="inputValue">Pixels</label>
 					<div>
 						<input type="text" id="inputValue" value="10" />
 						<span id="spanInput" class="unit">px</span>
@@ -112,16 +112,36 @@
 				</div>
 				<button id="toggleButton" class="exchange-icon">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-						<path
-							d="M19.924 10.383a1 1 0 0 0-.217-1.09l-5-5-1.414 1.414L16.586 9H4v2h15a1 1 0 0 0 .924-.617zM4.076 13.617a1 1 0 0 0 .217 1.09l5 5 1.414-1.414L7.414 15H20v-2H5a.999.999 0 0 0-.924.617z">
-						</path>
+						<path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path>
+						<path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path>
 					</svg>
 				</button>
 				<div class="input-group">
-					<label id="labelOutput" for="outputValue">REM</label>
+					<label class="labelOutput" for="outputValue">REM</label>
 					<div>
 						<input type="text" id="outputValue" value="0.625" readonly />
 						<span id="spanOutput" class="unit">rem</span>
+					</div>
+				</div>
+			</div>
+			<div>
+				<label for="conversionSelect">Tipo de conversión:</label>
+				<div class="container-radios">
+					<div>
+						<div id="radio-pxToRem"></div>
+						<div id="radio-RemToPx"></div>
+					</div>
+					<div>
+						<div id="radio-pxToEm"></div>
+						<div id="radio-emToPx"></div>
+					</div>
+					<div>
+						<div id="radio-pxToPercentage"></div>
+						<div id="radio-percentageToPx"></div>
+					</div>
+					<div>
+						<div id="radio-pxToBaseUnit"></div>
+						<div id="radio-baseUnitToPx"></div>
 					</div>
 				</div>
 			</div>
@@ -231,7 +251,7 @@
 			</li>
 		</ul>
 	</footer>
-	<script src="../dist/index.js"></script>
+	<script type="module" src="../dist/index.js"></script>
 </body>
 
 </html>

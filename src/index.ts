@@ -44,6 +44,14 @@ const conversionFunctions: { [key: string]: (input: number, context?: number) =>
 	percentageToPx: (percentage: number, context: number = baseFontSize) => (percentage / 100) * context,
 	pxToBaseUnit: (px: number, base: number = baseFontSize) => px / base,
 	baseUnitToPx: (unit: number, base: number = baseFontSize) => unit * base,
+	pxToPt: (px: number) => (px / 96) * 72,
+	ptToPx: (pt: number) => (pt / 72) * 96,
+	pxToCm: (px: number) => (px / 96) * 2.54,
+	cmToPx: (cm: number) => (cm / 2.54) * 96,
+	pxToMm: (px: number) => (px / 96) * 25.4,
+	mmToPx: (mm: number) => (mm / 25.4) * 96,
+	pxToPc: (px: number) => (px / 96) * 6,
+	pcToPx: (pc: number) => (pc / 6) * 96
 };
 
 // Actualizar la conversión
@@ -65,6 +73,14 @@ const updateLabelsAndPlaceholders = () => {
 		percentageToPx: { input: 'Porcentaje', inputUnit: '%', output: 'Pixeles', outputUnit: 'px' },
 		pxToBaseUnit: { input: 'Pixeles', inputUnit: 'px', output: 'Unidad base', outputUnit: 'unit' },
 		baseUnitToPx: { input: 'Unidad base', inputUnit: 'unit', output: 'Pixeles', outputUnit: 'px' },
+		pxToPt: { input: 'Pixeles', inputUnit: 'px', output: 'Puntos', outputUnit: 'pt' },
+		ptToPx: { input: 'Puntos', inputUnit: 'pt', output: 'Pixeles', outputUnit: 'px' },
+		pxToCm: { input: 'Pixeles', inputUnit: 'px', output: 'Centímetros', outputUnit: 'cm' },
+		cmToPx: { input: 'Centímetros', inputUnit: 'cm', output: 'Pixeles', outputUnit: 'px' },
+		pxToMm: { input: 'Pixeles', inputUnit: 'px', output: 'Milímetros', outputUnit: 'mm' },
+		mmToPx: { input: 'Milímetros', inputUnit: 'mm', output: 'Pixeles', outputUnit: 'px' },
+		pxToPc: { input: 'Pixeles', inputUnit: 'px', output: 'Picas', outputUnit: 'pc' },
+		pcToPx: { input: 'Picas', inputUnit: 'pc', output: 'Pixeles', outputUnit: 'px' }
 	};
 
 	const labels = labelMapping[conversionType] || { input: '', inputUnit: '', output: '', outputUnit: '' };
@@ -101,6 +117,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	new RadioComponent('percentageToPx', 'Porcentaje a PX', 'conversionType', false, 'radio-percentageToPx');
 	new RadioComponent('pxToBaseUnit', 'PX a Unidad base', 'conversionType', false, 'radio-pxToBaseUnit');
 	new RadioComponent('baseUnitToPx', 'Unidad base a PX', 'conversionType', false, 'radio-baseUnitToPx');
+	new RadioComponent('pxToPt', 'PX a PT', 'conversionType', false, 'radio-pxToPt');
+	new RadioComponent('ptToPx', 'PT a PX', 'conversionType', false, 'radio-ptToPx');
+	new RadioComponent('pxToCm', 'PX a CM', 'conversionType', false, 'radio-pxToCm');
+	new RadioComponent('cmToPx', 'CM a PX', 'conversionType', false, 'radio-cmToPx');
+	new RadioComponent('pxToMm', 'PX a MM', 'conversionType', false, 'radio-pxToMm');
+	new RadioComponent('mmToPx', 'MM a PX', 'conversionType', false, 'radio-mmToPx');
+	new RadioComponent('pxToPc', 'PX a PC', 'conversionType', false, 'radio-pxToPc');
+	new RadioComponent('pcToPx', 'PC a PX', 'conversionType', false, 'radio-pcToPx');
 
 	const radioButtons = document.querySelectorAll('input[name="conversionType"]') as NodeListOf<HTMLInputElement>;
 

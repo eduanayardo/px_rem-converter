@@ -1,6 +1,6 @@
 # Conversor de unidades (PX, Rem, Em, Porcentaje, Unidad base)
 
-Esta herramienta permite convertir entre diferentes unidades utilizadas en diseño web, como PX, REM, EM, Porcentaje y unidades base. La interfaz está diseñada para ser intuitiva y fácil de usar, con soporte para modos claro y oscuro.
+Esta herramienta permite convertir entre diferentes unidades utilizadas en diseño web, como PX, REM, EM, Porcentaje, Unidades base, Puntos, Centímetros, Molímetros y Picas. La interfaz está diseñada para ser intuitiva y fácil de usar, con soporte para modos claro y oscuro.
 
 ## Funcionalidades
 
@@ -8,6 +8,10 @@ Esta herramienta permite convertir entre diferentes unidades utilizadas en dise�
 - **Convertidor de PX a EM y viceversa**
 - **Convertidor de PX a Porcentaje y viceversa**
 - **Convertidor de PX a Unidad base y viceversa**
+- **Convertidor de PX a Puntos y viceversa**
+- **Convertidor de PX a Centímetros y viceversa**
+- **Convertidor de PX a Milímetros y viceversa**
+- **Convertidor de PX a Picas y viceversa**
 
 ## Cómo usar
 
